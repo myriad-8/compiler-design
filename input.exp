@@ -1,0 +1,24 @@
+take("Enter a number: ", a);
+take("Enter another: ", b);
+
+c = a + b;
+isEven = c & 1;
+
+show("The sum is: ", c);
+
+if (isEven == 0) {
+    if (c > 10) {
+        show("Sum is Even and > 10. Value: ", c);
+    } else {
+        show("Sum is Even but small: ", c);
+    }
+} else {
+    show("Sum is Odd! Value: ", c);
+}
+
+
+show("Starting countdown from: ", b);
+while (b > 0) {
+    show("Countdown: ", b);
+    b = b - 1;
+}

@@ -1,0 +1,8 @@
+#!/bin/bash
+if ! command -v docker &> /dev/null; then
+    curl -fsSL https://get.docker.com | sh
+    sudo usermod -aG docker $USER
+fi
+
+# Execute Compiler
+docker run --rm --pull=always -v "$(pwd):/src" ghcr.io/myriad-8/compiler-design/expresso:latest "/src/$1"
